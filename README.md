@@ -13,3 +13,5 @@
 ### Notes:
 
 1. Cannot use router inside router, so export all the components from app1 to main app and recreate the routes.
+2. We can only use the ejected webpack.config to render the Module Federation Micro FE, but the exported CRA app cant be used in MF apps.
+3. To fix this issue used `mf-cra` package, that can export our components from `CRA` apps.
