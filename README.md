@@ -9,3 +9,7 @@
 ### Tutorial
 
     Learned from this video https://www.youtube.com/watch?v=lKKsjpH09dU&ab_channel=freeCodeCamp.org
+
+### Notes:
+
+1. Cannot use router inside router, so export all the components from app1 to main app and recreate the routes.
