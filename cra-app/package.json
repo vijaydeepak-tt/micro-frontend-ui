@@ -31,7 +31,6 @@
     "jest": "^27.4.3",
     "jest-resolve": "^27.4.2",
     "jest-watch-typeahead": "^1.0.0",
-    "mf-cra": "^0.0.5",
     "mini-css-extract-plugin": "^2.4.5",
     "postcss": "^8.4.4",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -60,7 +59,7 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
-    "start": "PORT=3035 mf-cra start",
+    "start": "PORT=3035 node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
