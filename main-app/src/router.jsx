@@ -6,6 +6,8 @@ import Footer from 'main_app/Footer';
 import HomeContent from 'main_app/HomeContent';
 import ProductContent from 'product_app/ProductContent';
 import CartContent from 'cart_app/CartContent';
+import Blog from 'blogs/Blog';
+import BlogDetail from 'blogs/BlogDetail';
 
 const Root = () => (
   <div className="text-3xl mx-auto max-w-6xl">
@@ -33,6 +35,14 @@ export const router = createBrowserRouter([
       {
         path: '/cart',
         element: <CartContent />,
+      },
+      {
+        path: '/blogs',
+        element: <Blog />,
+      },
+      {
+        path: '/blogdetail/:blogid',
+        element: <BlogDetail />,
       },
     ],
   },

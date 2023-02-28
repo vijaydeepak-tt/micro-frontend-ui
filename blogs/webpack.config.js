@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const deps = require('./package.json').dependencies;
 module.exports = {
   output: {
-    publicPath: 'http://localhost:3030/',
+    publicPath: 'http://localhost:3034/',
   },
 
   resolve: {
@@ -12,7 +12,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 3030,
+    port: 3034,
     historyApiFallback: true,
   },
 
@@ -41,19 +41,13 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'main_app',
+      name: 'blogs',
       filename: 'remoteEntry.js',
-      remotes: {
-        main_app: 'main_app@http://localhost:3030/remoteEntry.js',
-        product_app: 'product_app@http://localhost:3031/remoteEntry.js',
-        cart_app: 'cart_app@http://localhost:3032/remoteEntry.js',
-        blogs: 'blogs@http://localhost:3034/remoteEntry.js',
-      },
+      remotes: {},
       exposes: {
-        './Header': './src/Components/Header.jsx',
-        './Footer': './src/Components/Footer.jsx',
-        './HomeContent': './src/Components/HomeContent.jsx',
-        './productsApi': './src/Api/index.js',
+        './Blogs': './src/App.jsx',
+        './Blog': './src/Components/Blog.jsx',
+        './BlogDetail': './src/Components/BlogDetail.jsx',
       },
       shared: {
         ...deps,
