@@ -567,25 +567,25 @@ module.exports = function (webpackEnv) {
       ].filter(Boolean),
     },
     plugins: [
-      new ModuleFederationPlugin({
-        name: 'cra_app',
-        filename: 'remoteEntry.js',
-        remotes: {
-          blogs: 'blogs@http://localhost:3034/remoteEntry.js',
-        },
-        exposes: {
-          './Garage': `./src/Components/Garage.jsx`,
-        },
-        shared: {
-          ...deps,
-          react: { singleton: true, eager: true, requiredVersion: deps.react },
-          'react-dom': {
-            singleton: true,
-            eager: true,
-            requiredVersion: deps['react-dom'],
-          },
-        },
-      }),
+      // new ModuleFederationPlugin({
+      //   name: 'cra_app',
+      //   filename: 'remoteEntry.js',
+      //   remotes: {
+      //     blogs: 'blogs@http://localhost:3034/remoteEntry.js',
+      //   },
+      //   exposes: {
+      //     './Garage': `./src/Components/Garage.jsx`,
+      //   },
+      //   shared: {
+      //     ...deps,
+      //     react: { singleton: true, eager: true, requiredVersion: deps.react },
+      //     'react-dom': {
+      //       singleton: true,
+      //       eager: true,
+      //       requiredVersion: deps['react-dom'],
+      //     },
+      //   },
+      // }),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
