@@ -48,6 +48,7 @@ module.exports = {
         product_app: 'product_app@http://localhost:3031/remoteEntry.js',
         cart_app: 'cart_app@http://localhost:3032/remoteEntry.js',
         blogs: 'blogs@http://localhost:3034/remoteEntry.js',
+        cra_app: 'cra_app@http://localhost:3035/remoteEntry.js',
       },
       exposes: {
         './Header': './src/Components/Header.jsx',
