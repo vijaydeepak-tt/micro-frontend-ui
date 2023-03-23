@@ -16,3 +16,4 @@
 2. We can only use the ejected webpack.config to render the Module Federation Micro FE, but the exported CRA app cant be used in MF apps.
 3. To fix this issue used `mf-cra` package, that can export our components from `CRA` apps. - `https://socket.dev/npm/package/mf-cra`
 4. Removed `mf-cra`, as not to have any dependency over othe packages fo MF, copied the webpack code to local and fixed the process.
+5. Webpack config cannot be overriten in default `react-script`, we have to eject the project and have to use it or we can u additional package to overrite the webpack config like [`react-app-rewire`](https://www.npmjs.com/package/react-app-rewired)
