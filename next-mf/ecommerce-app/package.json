@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev",
+    "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true node server.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -11,6 +11,8 @@
   "dependencies": {
     "@module-federation/nextjs-mf": "^8.3.24",
     "@module-federation/runtime": "^0.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
     "feather-route-matcher": "^4.0.0",
     "next": "14.2.4",
     "next-cors": "^1.0.0",

@@ -7,7 +7,6 @@ const nextConfig = {
     config.plugins.push(
       new NextFederationPlugin({
         name: 'cart',
-        runtimePlugins: ['./runtimePlugin.js'],
         remotes: {
           ecommerce: `ecommerce@http://localhost:3000/_next/static/${
             isServer ? 'ssr' : 'chunks'
